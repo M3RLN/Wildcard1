@@ -30,12 +30,4 @@ public class PlayerController : MonoBehaviour {
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
     }
-
-    private bool IsGrounded()
-    {
-        if (GetComponent<Rigidbody2D>().moveSpeed.y <= 0)
-        {
-
-        }
-    }
 }
