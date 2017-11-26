@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class dragMouse : MonoBehaviour {
-
-    //public GameObject test;
-    float distance = 10;
+    
+    float distance = 50;
 
     private void OnMouseDrag()
     {
@@ -15,12 +14,9 @@ public class dragMouse : MonoBehaviour {
 			Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
 			transform.position = objPosition;
 		}
-		//changes
-		
-        //Instantiate(test, transform.position, transform.rotation);
-		
     }
 	
+    /*
 	private void OnMouseOver () {
 		if (transform.tag == "playable")
 		{
@@ -30,7 +26,6 @@ public class dragMouse : MonoBehaviour {
 			}
 		}
 	}
-	
-//
+    */
 }
 

@@ -268,7 +268,7 @@ MonoBehaviour:
         m_MethodName: SpawnSprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1230794716173314, guid: 9cbae8a5bfc652847ad113fb99659c50,
+          m_ObjectArgument: {fileID: 1230649498481068, guid: e310ce3c85e949740a3a86c43ef10c9c,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -470,7 +470,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 642152677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1015,7 +1015,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1773441521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 90}
+  m_LocalPosition: {x: 0, y: 0, z: 50}
   m_LocalScale: {x: 0.24156915, y: 0.24156915, z: 0.24156915}
   m_Children:
   - {fileID: 237969358}

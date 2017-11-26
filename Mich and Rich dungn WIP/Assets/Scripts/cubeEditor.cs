@@ -10,14 +10,12 @@ public class cubeEditor : MonoBehaviour {
     private void OnMouseDown()
     {
 		if (Input.GetMouseButtonDown(0)) {
-			print("Left click");
 			Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
 			Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
 			transform.position = objPosition;
 			dragging = true;
 		}
 		else if (Input.GetMouseButtonDown(1)) {
-			print("Right click");
 			deleting = true;
 		}
 	}
@@ -35,33 +33,34 @@ public class cubeEditor : MonoBehaviour {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 rayPoint = ray.GetPoint(distance);
             transform.position = rayPoint;
-            // this.transform.position = Input.mousePosition;
         }
-		
+        /*
 		if (deleting) {
 			Destroy(gameObject);
 		}
-		/*
+		
 		if (Input.GetMouseButtonDown(1)){
 			var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			var hit : RaycastHit;
+			RaycastHit hit;
 			if (Physics.Raycast(ray, hit)){
 				Destroy(hit.transform.gameObject);
 			}
 		}
-		*/
+        */
+        /*
 		if (Input.GetMouseButtonDown(1)) {
 			print("Right Mouse Clicked");
 			Destroy(gameObject);
-			
 		}
-	
-	}
+	    */
+    }
 
-	private void OnMouseOver () {
+    /*
+    private void OnMouseOver () {
 		if (Input.GetMouseButton(1)) {
 			print("Right Mouse Clicked");
 			Destroy(gameObject);
 		}
 	}
+    */
 }

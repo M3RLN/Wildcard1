@@ -7,7 +7,6 @@ public class deleteAll : MonoBehaviour {
 	public void DestroyGameObjectsWithTag(string tag)
 	{
 		GameObject[] gameObjects = GameObject.FindGameObjectsWithTag(tag);
-		print(gameObjects);
 		foreach (GameObject target in gameObjects) {
 			Destroy(target);
 		}
