@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dragMouse : MonoBehaviour {
+public class room_controller : MonoBehaviour {
     
     float distance = 50;
 
@@ -15,17 +15,5 @@ public class dragMouse : MonoBehaviour {
 			transform.position = objPosition;
 		}
     }
-	
-    /*
-	private void OnMouseOver () {
-		if (transform.tag == "playable")
-		{
-			if (Input.GetMouseButton(1)) {
-				print("Right Mouse Clicked");
-				Destroy(gameObject);
-			}
-		}
-	}
-    */
 }
 
