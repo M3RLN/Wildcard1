@@ -241,6 +241,11 @@ Prefab:
       propertyPath: m_GravityScale
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 50465844114241542, guid: 3378c3600b68b7240b6869253fe0baf5,
+        type: 2}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3378c3600b68b7240b6869253fe0baf5, type: 2}
   m_IsPrefabParent: 0
@@ -262,6 +267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   jumpHeight: 15
+  isMoving: 0
+  isJumping: 0
 --- !u!1 &918898254
 GameObject:
   m_ObjectHideFlags: 0
