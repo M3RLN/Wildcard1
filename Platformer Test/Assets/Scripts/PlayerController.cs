@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
     Animator theanimator;
     public bool isMoving;
     public bool isJumping;
-
+    public bool isAttacking;
 
     // Use this for initialization
     void Start () {
@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
 
         isMoving = false;
         isJumping = false;
+        isAttacking = false;
 
         if (GetComponent<Rigidbody2D>().velocity.x != 0)
             isMoving = true;
@@ -30,19 +31,24 @@ public class PlayerController : MonoBehaviour {
             isMoving = false;
         
 
-
         if (GetComponent<Rigidbody2D>().velocity.y > 0)
             isJumping = true;
         else
             isJumping = false;
         
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            isAttacking = true;
+        }
 
         theanimator.SetBool("mve", isMoving);
         theanimator.SetBool("jmp", isJumping);
+        theanimator.SetBool("atk", isAttacking);
 
-		if(Input.GetKeyDown (KeyCode.Space))
+		if(Input.GetKeyDown (KeyCode.W))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
+            if (GetComponent<Rigidbody2D>().velocity.y == 0)
+                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
         }
 
         if (Input.GetKey(KeyCode.D))
@@ -54,6 +60,7 @@ public class PlayerController : MonoBehaviour {
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
+
     }
     
 }
