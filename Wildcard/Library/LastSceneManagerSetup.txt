@@ -1,0 +1,5 @@
+sceneSetups:
+- path: C:/Users/Vincent.DESKTOP-J4C8DPK/Desktop/Wildcard/Platformer Test/Assets/Levels/test
+    level.unity
+  isLoaded: 1
+  isActive: 1

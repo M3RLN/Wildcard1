@@ -11,13 +11,15 @@ public class PlayerController : MonoBehaviour {
     public bool isMoving;
     public bool isJumping;
     public bool isAttacking;
+	public bool isFacingRight;
 
     // Use this for initialization
     void Start () {
         //theanimator = gameObject.GetComponent<Animator>();
         theanimator = GetComponent<Animator>();
+		isFacingRight = true;
     }
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -27,20 +29,13 @@ public class PlayerController : MonoBehaviour {
 
         if (GetComponent<Rigidbody2D>().velocity.x != 0)
             isMoving = true;
-        else
-            isMoving = false;
-        
 
         if (GetComponent<Rigidbody2D>().velocity.y > 0)
             isJumping = true;
-        else
-            isJumping = false;
         
         if (Input.GetKeyDown(KeyCode.Space))
-        {
             isAttacking = true;
-        }
-
+		
         theanimator.SetBool("mve", isMoving);
         theanimator.SetBool("jmp", isJumping);
         theanimator.SetBool("atk", isAttacking);
@@ -53,11 +48,19 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.D))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+			if (isFacingRight == false)
+				theanimator.transform.Rotate(0, 180, 0);
+			isFacingRight = true;
+			
+			GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
-
+		
         if (Input.GetKey(KeyCode.A))
         {
+			if (isFacingRight == true)
+				theanimator.transform.Rotate(0, 180, 0);
+			isFacingRight = false;
+			
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
 
