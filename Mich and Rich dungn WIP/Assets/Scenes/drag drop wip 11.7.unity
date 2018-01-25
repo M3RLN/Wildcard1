@@ -487,6 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   edge_detection: 30
   speed: 10
+  target_script: {fileID: 1771000601}
 --- !u!1 &1080341440
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9123208bb3e59924ab9da6945f1cf80c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max_one_room: 0
 --- !u!114 &1771000602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -931,6 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78cf070dad24df43bafea58a72c271d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target_script: {fileID: 1771000601}
 --- !u!1 &1773441521
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ public class camera_controller : MonoBehaviour {
     public float edge_detection;
     public float speed;
 
+    public spawn_sprite target_script;
+
     private void pan_camera()
     {
         if (Input.mousePosition.x >= Screen.width - edge_detection) // move camera right
@@ -42,19 +44,12 @@ public class camera_controller : MonoBehaviour {
             {
                 Transform objectHit = hit.transform;
                 if (objectHit.tag == "playable")
+                {
                     Destroy(objectHit.gameObject);
+                    target_script.max_one_room = false;
+                }
+                    
             }
-
-            /*
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-            if (hit.collider != null)
-            {
-                Transform objectHit = hit.transform;
-                if (objectHit.tag == "playable")
-                    Destroy(objectHit.gameObject);
-            }
-            */
         }
     }
     

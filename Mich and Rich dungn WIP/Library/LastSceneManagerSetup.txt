@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/drag drop wip 11.7.unity
+- path: Assets/Scenes/drag drop wip 11.7.unity
   isLoaded: 1
   isActive: 1

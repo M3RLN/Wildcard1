@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/drag drop wip 11.7.unity
+    guid: d1a39d8ec94f14b4ab582d65569f6473
+  - enabled: 1
+    path: Assets/Scenes/createRoom scene.unity
+    guid: 07b12cb1af3cbb24cae4bcb7668dc333
+  - enabled: 1
+    path: Assets/Scenes/testing.unity
+    guid: 4fd66e959cf214c40adf43648e12d4b4
