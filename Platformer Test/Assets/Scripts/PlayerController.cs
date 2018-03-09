@@ -12,7 +12,9 @@ public class PlayerController : MonoBehaviour {
     public bool isJumping;
     public bool isAttacking;
 	public bool isFacingRight;
-
+	
+	// attack cooldown
+	
     // Use this for initialization
     void Start () {
         //theanimator = gameObject.GetComponent<Animator>();
@@ -34,7 +36,11 @@ public class PlayerController : MonoBehaviour {
             isJumping = true;
         
         if (Input.GetKeyDown(KeyCode.Space))
+		{
             isAttacking = true;
+			//Attack();
+			
+		}
 		
         theanimator.SetBool("mve", isMoving);
         theanimator.SetBool("jmp", isJumping);
@@ -66,5 +72,18 @@ public class PlayerController : MonoBehaviour {
 
     }
     
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		Debug.Log("in range");
+		if (other.gameObject.tag == "Enemy" & isAttacking)
+			Debug.Log("hit 1");
+		
+	}
+	
+	void OnTriggerStay2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "Enemy" & isAttacking)
+			Debug.Log("hit 2");
+	}
 }
 
