@@ -19,7 +19,6 @@ public class yokaifireballcontroller : MonoBehaviour {
         {
             collision.SendMessageUpwards("YokaiDamage", dmg);
             Destroy(gameObject);
-
         }
     }
 }

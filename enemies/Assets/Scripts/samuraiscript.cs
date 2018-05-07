@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class samuraiscript : MonoBehaviour
 {
-    public float moveSpeed;
+    public float moveSpeed = 0.75f;
     public int health = 50;
 
     private bool attacking = false;
@@ -25,24 +25,20 @@ public class samuraiscript : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         attackTriggerSamurai.enabled = false;
-
     }
 
     // Update is called once per frame
     void Update()
     {
         anim.SetBool("attacking", attacking);
-
         if (health <= 0)
         {
             Destroy(gameObject);
         }
-
         if (control == false)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
-
         if (control)
         {
             attacking = false;
@@ -57,7 +53,6 @@ public class samuraiscript : MonoBehaviour
                     transform.Rotate(0, 180, 0);
                 }
             }
-
             if (Input.GetKey(KeyCode.L))
             {
 
@@ -69,13 +64,10 @@ public class samuraiscript : MonoBehaviour
                     transform.Rotate(0, 180, 0);
                 }
             }
-
             if (Input.GetKeyDown(KeyCode.H))
             {
-
                 attacking = true;
                 attackTriggerSamurai.enabled = true;
-
             }
         }
     }
@@ -87,7 +79,6 @@ public class samuraiscript : MonoBehaviour
             {
                 transform.Rotate(0, 180, 0);
                 moveSpeed *= -1;
-
                 if (facingleft)
                 {
                     facingleft = false;
@@ -110,17 +101,15 @@ public class samuraiscript : MonoBehaviour
                 attacking = true;
                 attackTriggerSamurai.enabled = true;
                 Cooldown -= Time.deltaTime;
-                if (moveSpeed == 1f)
+                if (moveSpeed == 0.75f)
                 {
-                    moveSpeedContainer = 1f;
+                    moveSpeedContainer = 0.75f;
                 }
-                if (moveSpeed == -1f)
+                if (moveSpeed == -0.75f)
                 {
-                    moveSpeedContainer = -1f;
+                    moveSpeedContainer = -0.75f;
                 }
-
                 moveSpeed = 0f;
-
                 if (Cooldown <= 0.2f)
                 {
                     Cooldown = 1.25f;
@@ -165,7 +154,6 @@ public class samuraiscript : MonoBehaviour
             control = true;
         }
     }
-
     public void YokaiDamage(int damage)
     {
         health -= damage;

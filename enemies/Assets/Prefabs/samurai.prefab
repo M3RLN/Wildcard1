@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8313f97612d9e294ca5a8568225e37e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 10
+  damage: 10
 --- !u!114 &114416895455099860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3323d7f4144c4cb4d8ddd7598043d6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 0.75
   health: 50
   attackTriggerSamurai: {fileID: 61939090764037510}
 --- !u!212 &212417575849473336

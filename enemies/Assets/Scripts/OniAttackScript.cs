@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class OniAttackScript : MonoBehaviour
 {
-
-    public int dmg = 20;
-
+    public int dmg = 5000;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.isTrigger != true && collision.CompareTag("Player"))

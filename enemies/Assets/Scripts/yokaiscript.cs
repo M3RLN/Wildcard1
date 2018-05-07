@@ -24,10 +24,7 @@ public class yokaiscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-
-
         if (health <= 0)
         {
             Destroy(gameObject);
@@ -47,12 +44,10 @@ public class yokaiscript : MonoBehaviour
             moveSpeed *= -1;
         }
     }
-    
 
     IEnumerator ShootsFire()
 
     {
-
         while (true)
         {
 
